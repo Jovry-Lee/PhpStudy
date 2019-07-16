@@ -35,54 +35,24 @@ bingo，得到4升水了
 25 % 7 = 4
 bingo，得到目标4升水了。
 
+##### 代码执行结果
+```
+$ php WaterPouring.php
+请输入两个杯子的容量:
+5
+7
+请输入目标水量:
+4
+初始情况: smallCup: 5, bigCup: 0
+第2次倒水, smallCup: 10, bigCupRemain: 3
+第3次倒水, smallCup: 15, bigCupRemain: 1
+第4次倒水, smallCup: 20, bigCupRemain: 6
+第5次倒水, smallCup: 25, bigCupRemain: 4
+倒水成功, 得到目标水量!
+```
 
-package WaterPouring;
-import java.util.Scanner;
 
-public class WaterPouring {
-    public static void main(String[] args) {
-        //实例代码解决：用两个较小杯子得到指定数量水的问题
-        Scanner sc = new Scanner(System.in);
-        System.out.println("请输入两个小杯子的容量，用空格隔开。");
 
-        int cup1 = sc.nextInt();
-        int cup2 = sc.nextInt();
 
-        System.out.println("请输入你希望得到多少升水，整形数字。");
-        int target = sc.nextInt();
-
-        if(cup1>cup2) {//保证杯子1的容量较小
-            int tmp = cup1;
-            cup1 = cup2;
-            cup2 = tmp;
-        }
-        //因为每次都是小杯子装满水往大杯子中倒水，倒完后小杯子剩余水量总是0
-        //所以只需要跟踪大杯子剩余水量即可知道整个倒水的操作过程
-        System.out.println("第二个杯子的水量为: " + 0);
-
-      //先倒一次水，主要是为了处理倒水失败的情况
-        int flag = cup1 % cup2;
-        System.out.println("第二个杯子的水量为: "+cup1);
-
-        if(flag == target) {
-            System.out.println("小杯往大杯倒一次水即可实现目标");
-            return;
-        }
-
-        int count = 2;
-        while(true) {
-            int remain = (count * cup1) % cup2;
-            System.out.println("第二个杯子的水容量: "+remain);
-
-            if(remain == target) {
-                System.out.println("倒水成功，得到了目标水量");
-                break;
-            }else if(remain == flag) {//得到循环数列，实现不了目标
-                System.out.println("倒水失败，得不到目标水量");
-                break;
-            }
-
-            count++;
-        }
-    }
-}
+##### 参考资料
+[漫画-经典倒水问题(美团面试题)](https://zhuanlan.zhihu.com/p/65065359)
