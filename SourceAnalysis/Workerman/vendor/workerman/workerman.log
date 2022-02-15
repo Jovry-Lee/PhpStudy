@@ -1,0 +1,157 @@
+2021-03-29 07:47:29 pid:22144 Workerman[TcpServerTest.php] start in DEBUG mode
+2021-03-29 08:06:13 pid:22144 Workerman[TcpServerTest.php] stopping ...
+2021-03-29 08:06:13 pid:22144 Workerman[TcpServerTest.php] has been stopped
+2021-03-29 08:32:27 pid:22408 Workerman[TcpServerTest.php] start in DEBUG mode
+2021-03-29 08:32:36 pid:22415 Worker[22415] process terminated
+2021-03-29 08:32:36 pid:22413 Worker[22413] process terminated
+2021-03-29 08:32:36 pid:22412 Worker[22412] process terminated
+2021-03-29 08:32:37 pid:22419 Worker[22419] process terminated
+2021-03-29 08:32:37 pid:22420 Worker[22420] process terminated
+2021-03-29 08:32:37 pid:22414 Worker[22414] process terminated
+2021-03-29 08:32:42 pid:22421 Worker[22421] process terminated
+2021-03-29 08:32:42 pid:22424 Worker[22424] process terminated
+2021-03-29 08:32:42 pid:22425 Worker[22425] process terminated
+2021-03-29 08:33:12 pid:22423 Worker[22423] process terminated
+2021-03-29 08:33:12 pid:22428 Worker[22428] process terminated
+2021-03-29 08:33:12 pid:22429 Worker[22429] process terminated
+2021-03-29 08:33:30 pid:22408 Workerman[TcpServerTest.php] stopping ...
+2021-03-29 08:33:30 pid:22408 Workerman[TcpServerTest.php] has been stopped
+2021-03-29 09:50:15 pid:23350 Workerman[TcpServerTest.php] start in DEBUG mode
+2021-03-29 09:51:08 pid:23350 Workerman[TcpServerTest.php] stopping ...
+2021-03-29 09:51:08 pid:23350 Workerman[TcpServerTest.php] has been stopped
+2021-03-29 09:51:35 pid:23376 Workerman[TcpServerTest.php] start in DEBUG mode
+2021-03-29 09:51:50 pid:23376 Workerman[TcpServerTest.php] stopping ...
+2021-03-29 09:51:50 pid:23376 Workerman[TcpServerTest.php] has been stopped
+2021-03-29 11:00:51 pid:23598 Workerman[TcpServerTest.php] start in DEBUG mode
+2021-03-29 11:05:17 pid:23598 Workerman[TcpServerTest.php] stopping ...
+2021-03-29 11:05:17 pid:23598 Workerman[TcpServerTest.php] has been stopped
+2021-04-02 05:30:44 pid:55918 Workerman[TcpServerTest.php] start in DEBUG mode
+2021-04-02 05:39:09 pid:55961 Workerman[TcpServerTest.php] status 
+2021-04-02 05:39:09 pid:55961 Workerman[TcpServerTest.php] not run
+2021-04-02 05:50:03 pid:56021 Workerman[TcpServerTest.php] start in DEBUG mode
+2021-04-02 05:50:21 pid:56064 Workerman[TcpServerTest.php] status 
+2021-04-02 05:53:00 pid:56102 Workerman[TcpServerTest.php] status 
+2021-04-02 06:05:39 pid:56229 Workerman[TcpServerTest.php] status 
+2021-04-02 06:09:26 pid:56279 Workerman[TcpServerTest.php] status 
+2021-04-06 01:28:21 pid:64903 Workerman[TcpServerTest.php] status 
+2021-04-06 01:44:01 pid:65006 Workerman[TcpServerTest.php] connections 
+2021-04-07 11:54:05 pid:86715 Workerman[TcpServerTest.php] restart 
+2021-04-08 01:52:44 pid:88871 Workerman[TcpServerTest.php] status 
+2021-04-09 01:35:30 pid:3691 Workerman[TcpServerTest.php] status 
+2021-04-09 03:05:29 pid:5758 Workerman[TcpServerTest.php] status 
+2021-04-09 03:10:00 pid:5817 Workerman[TcpServerTest.php] connections 
+2021-04-09 09:21:40 pid:1169 Workerman[TcpServerTest.php] start in DEBUG mode
+2021-04-09 09:22:02 pid:1179 Workerman[TcpServerTest.php] reload 
+2021-04-09 09:22:02 pid:1169 Workerman[TcpServerTest.php] reloading
+2021-04-09 09:23:00 pid:1200 Workerman[TcpServerTest.php] reload 
+2021-04-09 09:23:00 pid:1169 Workerman[TcpServerTest.php] reloading
+2021-04-09 09:23:28 pid:1215 Workerman[TcpServerTest.php] restart 
+2021-04-09 09:23:28 pid:1215 Workerman[TcpServerTest.php] is stopping ...
+2021-04-09 09:23:28 pid:1169 Workerman[TcpServerTest.php] stopping ...
+2021-04-09 09:23:28 pid:1169 Workerman[TcpServerTest.php] has been stopped
+2021-04-09 09:23:28 pid:1215 Workerman[TcpServerTest.php] stop success
+2021-04-09 09:26:21 pid:1238 Workerman[TcpServerTest.php] restart 
+2021-04-09 09:26:21 pid:1238 Workerman[TcpServerTest.php] is stopping ...
+2021-04-09 09:26:21 pid:1215 Workerman[TcpServerTest.php] stopping ...
+2021-04-09 09:26:21 pid:1215 Workerman[TcpServerTest.php] has been stopped
+2021-04-09 09:26:21 pid:1238 Workerman[TcpServerTest.php] stop success
+2021-04-09 09:26:26 pid:1251 Workerman[TcpServerTest.php] reload 
+2021-04-09 09:26:26 pid:1238 Workerman[TcpServerTest.php] reloading
+2021-04-09 09:28:00 pid:1274 Workerman[TcpServerTest.php] reload 
+2021-04-09 09:28:00 pid:1238 Workerman[TcpServerTest.php] reloading
+2021-04-09 09:38:40 pid:1396 Workerman[TcpServerTest.php] restart 
+2021-04-09 09:38:40 pid:1396 Workerman[TcpServerTest.php] is stopping ...
+2021-04-09 09:38:40 pid:1238 Workerman[TcpServerTest.php] stopping ...
+2021-04-09 09:38:40 pid:1238 Workerman[TcpServerTest.php] has been stopped
+2021-04-09 09:38:40 pid:1396 Workerman[TcpServerTest.php] stop success
+2021-04-09 09:38:48 pid:1404 Workerman[TcpServerTest.php] reload 
+2021-04-09 09:38:48 pid:1396 Workerman[TcpServerTest.php] reloading
+2021-04-09 09:45:37 pid:1396 Workerman[TcpServerTest.php] stopping ...
+2021-04-09 09:45:37 pid:1396 Workerman[TcpServerTest.php] has been stopped
+2021-04-09 09:45:49 pid:1453 Workerman[TcpServerTest.php] start in DEBUG mode
+2021-04-09 09:46:00 pid:1469 Workerman[TcpServerTest.php] status 
+2021-04-09 09:46:35 pid:1453 Workerman[TcpServerTest.php] stopping ...
+2021-04-09 09:46:35 pid:1453 Workerman[TcpServerTest.php] has been stopped
+2021-04-09 09:46:36 pid:1483 Workerman[TcpServerTest.php] start in DEBUG mode
+2021-04-09 09:46:42 pid:1502 Workerman[TcpServerTest.php] status 
+2021-04-09 09:47:32 pid:1526 Workerman[TcpServerTest.php] reload 
+2021-04-09 09:47:32 pid:1483 Workerman[TcpServerTest.php] reloading
+2021-04-09 09:48:29 pid:1550 Workerman[TcpServerTest.php] restart 
+2021-04-09 09:48:29 pid:1550 Workerman[TcpServerTest.php] is stopping ...
+2021-04-09 09:48:29 pid:1483 Workerman[TcpServerTest.php] stopping ...
+2021-04-09 09:48:29 pid:1483 Workerman[TcpServerTest.php] has been stopped
+2021-04-09 09:48:29 pid:1550 Workerman[TcpServerTest.php] stop success
+2021-04-09 09:48:34 pid:1564 Workerman[TcpServerTest.php] reload 
+2021-04-09 09:48:34 pid:1550 Workerman[TcpServerTest.php] reloading
+2021-04-09 09:48:54 pid:1591 Workerman[TcpServerTest.php] status 
+2021-04-09 09:49:50 pid:1601 Workerman[TcpServerTest.php] restart 
+2021-04-09 09:49:50 pid:1601 Workerman[TcpServerTest.php] is stopping ...
+2021-04-09 09:49:50 pid:1550 Workerman[TcpServerTest.php] stopping ...
+2021-04-09 09:49:50 pid:1550 Workerman[TcpServerTest.php] has been stopped
+2021-04-09 09:49:50 pid:1601 Workerman[TcpServerTest.php] stop success
+2021-04-09 09:49:57 pid:1622 Workerman[TcpServerTest.php] reload 
+2021-04-09 09:49:57 pid:1601 Workerman[TcpServerTest.php] reloading
+2021-04-09 09:50:10 pid:1644 Workerman[TcpServerTest.php] status 
+2021-04-09 09:50:28 pid:1655 Workerman[TcpServerTest.php] reload 
+2021-04-09 09:50:28 pid:1601 Workerman[TcpServerTest.php] reloading
+2021-04-09 09:55:35 pid:1701 Workerman[TcpServerTest.php] restart 
+2021-04-09 09:55:35 pid:1701 Workerman[TcpServerTest.php] is stopping ...
+2021-04-09 09:55:35 pid:1601 Workerman[TcpServerTest.php] stopping ...
+2021-04-09 09:55:35 pid:1601 Workerman[TcpServerTest.php] has been stopped
+2021-04-09 09:55:35 pid:1701 Workerman[TcpServerTest.php] stop success
+2021-04-09 09:55:39 pid:1720 Workerman[TcpServerTest.php] reload 
+2021-04-09 09:55:39 pid:1701 Workerman[TcpServerTest.php] reloading
+2021-04-09 09:58:54 pid:1753 Workerman[TcpServerTest.php] restart 
+2021-04-09 09:58:54 pid:1753 Workerman[TcpServerTest.php] is stopping ...
+2021-04-09 09:58:54 pid:1701 Workerman[TcpServerTest.php] stopping ...
+2021-04-09 09:58:54 pid:1701 Workerman[TcpServerTest.php] has been stopped
+2021-04-09 09:58:54 pid:1753 Workerman[TcpServerTest.php] stop success
+2021-04-09 09:58:57 pid:1772 Workerman[TcpServerTest.php] reload 
+2021-04-09 09:58:57 pid:1753 Workerman[TcpServerTest.php] reloading
+2021-04-09 10:00:24 pid:1806 Workerman[TcpServerTest.php] restart 
+2021-04-09 10:00:24 pid:1806 Workerman[TcpServerTest.php] is stopping ...
+2021-04-09 10:00:24 pid:1753 Workerman[TcpServerTest.php] stopping ...
+2021-04-09 10:00:24 pid:1753 Workerman[TcpServerTest.php] has been stopped
+2021-04-09 10:00:24 pid:1806 Workerman[TcpServerTest.php] stop success
+2021-04-09 10:00:27 pid:1823 Workerman[TcpServerTest.php] reload 
+2021-04-09 10:00:27 pid:1806 Workerman[TcpServerTest.php] reloading
+2021-04-09 10:18:35 pid:1806 Workerman[TcpServerTest.php] stopping ...
+2021-04-09 10:18:35 pid:1806 Workerman[TcpServerTest.php] has been stopped
+2021-04-12 02:25:57 pid:5398 Workerman[TcpServerTest.php] restart 
+2021-04-12 02:25:57 pid:5398 Workerman[TcpServerTest.php] is stopping ...
+2021-04-12 02:25:57 pid:5398 Workerman[TcpServerTest.php] stop success
+2021-04-12 02:26:00 pid:5416 Workerman[TcpServerTest.php] reload 
+2021-04-12 02:26:00 pid:5398 Workerman[TcpServerTest.php] reloading
+2021-04-12 02:34:15 pid:5476 Workerman[TcpServerTest.php] reload 
+2021-04-12 02:34:15 pid:5398 Workerman[TcpServerTest.php] reloading
+2021-04-12 02:34:56 pid:5398 Workerman[TcpServerTest.php] stopping ...
+2021-04-12 02:34:56 pid:5398 Workerman[TcpServerTest.php] has been stopped
+2021-04-12 02:34:58 pid:5500 Workerman[TcpServerTest.php] restart 
+2021-04-12 02:34:58 pid:5500 Workerman[TcpServerTest.php] is stopping ...
+2021-04-12 02:34:58 pid:5500 Workerman[TcpServerTest.php] stop success
+2021-04-12 02:35:01 pid:5517 Workerman[TcpServerTest.php] reload 
+2021-04-12 02:35:01 pid:5500 Workerman[TcpServerTest.php] reloading
+2021-04-12 02:36:37 pid:5543 Workerman[TcpServerTest.php] restart 
+2021-04-12 02:36:37 pid:5543 Workerman[TcpServerTest.php] is stopping ...
+2021-04-12 02:36:37 pid:5500 Workerman[TcpServerTest.php] stopping ...
+2021-04-12 02:36:37 pid:5500 Workerman[TcpServerTest.php] has been stopped
+2021-04-12 02:36:37 pid:5543 Workerman[TcpServerTest.php] stop success
+2021-04-12 02:36:42 pid:5560 Workerman[TcpServerTest.php] reload 
+2021-04-12 02:36:42 pid:5543 Workerman[TcpServerTest.php] reloading
+2021-04-12 03:14:04 pid:5716 Workerman[TcpServerTest.php] status 
+2021-04-12 08:31:30 pid:5543 Workerman[TcpServerTest.php] stopping ...
+2021-04-12 08:31:30 pid:5543 Workerman[TcpServerTest.php] has been stopped
+2021-04-12 08:58:52 pid:7387 Workerman[TcpServerTest.php] restart 
+2021-04-12 08:58:52 pid:7387 Workerman[TcpServerTest.php] is stopping ...
+2021-04-12 08:58:52 pid:7387 Workerman[TcpServerTest.php] stop success
+2021-04-13 09:38:50 pid:14899 Workerman[TcpServerTest.php] restart 
+2021-04-13 09:38:50 pid:14899 Workerman[TcpServerTest.php] is stopping ...
+2021-04-13 09:38:50 pid:14899 Workerman[TcpServerTest.php] stop success
+2021-04-17 16:41:31 pid:14899 Workerman[TcpServerTest.php] stopping ...
+2021-04-17 16:41:31 pid:14899 Workerman[TcpServerTest.php] has been stopped
+2022-02-15 07:27:16 pid:58839 Workerman[TcpServerTest.php] start in DEBUG mode
+2022-02-15 07:28:32 pid:58839 Workerman[TcpServerTest.php] stopping ...
+2022-02-15 07:28:32 pid:58839 Workerman[TcpServerTest.php] has been stopped
+2022-02-15 07:56:25 pid:59510 Workerman[TcpServerTest.php] start in DEBUG mode
+2022-02-15 07:57:10 pid:59510 Workerman[TcpServerTest.php] stopping ...
+2022-02-15 07:57:10 pid:59510 Workerman[TcpServerTest.php] has been stopped
