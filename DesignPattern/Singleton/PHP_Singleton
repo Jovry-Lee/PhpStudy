@@ -1,0 +1,240 @@
+PHP设计模式之单例模式
+前言
+PHP 设计模式系列，介绍 PHP 面向对象编程中常见的设计模式。
+
+PHP设计模式之单例模式
+
+正文
+单例模式
+单例模式是创建对象模式中的一种，它确保某一个类只有一个实例，自行实例化并向整个系统全局地提供这个实例（类似与 global）。当有任务需要该实例时，它不会创建实例副本，而是会返回单例类内部存储实例的一个引用。
+
+
+
+应用场景
+数据库连接
+单例模式主要在于数据库连接中。一个项目中会存在大量的数据库操作，比如过数据库句柄来连接数据库这一行为。使用单例模式可以避免大量的 new 操作，因为每一次 new 操作都会消耗内存资源和系统资源，还可以减少数据库连接这样就不容易出现 too many connections 情况；
+
+配置类
+项目中有一个类来全局控制某些配置信息。如果这个类能被实例化多次，可能在运行中对配置进行了修改，我们无法知道是在哪个实例中进行了修改。使用单例模式，所有对于配置文件的操作都是基于这个实例的；
+
+实例1–单例模式基本实现
+需要注意以下几点：
+
+需要一个静态的成员变量保存类的唯一实例；
+构造函数和克隆函数必须声明为私有，防止外部程序 new 类从而失去单例模式的意义；
+必须提供一个访问这个实例的公共的静态方法（通常命名为 getInstance），从而返回唯一实例的一个引用；
+以下是代码实现：
+
+<?php
+class singleton {
+    // 私有静态成员变量
+    private static $_instance = null;
+
+    // 私有构造函数，只在第一次实例化时执行
+    private function __construct() {}
+
+    // 私有克隆函数
+    private function __clone() {}
+
+    // 获取实例函数
+    public static function getInstance() {
+        if (self::$_instance === null) {
+            self::$_instance = new self();
+        }
+        return self::$_instance;
+    }
+}
+通过以下代码验证是否是同一实例：
+
+$a = singleton::getInstance();
+$b = singleton::getInstance();
+var_dump($a === $b);
+输出 bool(true)，可见 $a 和 $b 是同一个实例。
+
+实例2–应用单例模式的数据库连接类
+单例模式的一个常见应用是在数据库连接中，那么我们看一下如何将它应用在数据库连接中。
+
+未使用单例模式
+<?php
+......
+// 初始化一个数据库句柄
+$db = mysql_connect(...);
+
+// 添加用户信息
+$db->addUserInfo(...);
+
+......
+
+// 在函数中访问数据库，查找用户信息
+function getUserInfo()
+{
+    $db = mysql_connect(...); // 再次new 数据库类，和数据库建立连接
+    $db = query(....); // 根据查询语句访问数据库
+}
+?>
+多次连接数据库，浪费资源。
+
+使用单例模式
+<?php
+
+class DB {
+    // 增加一个成员变量存放数据库连接句柄
+    private $_db;
+    private static $_instance;
+
+    // 在构造函数中执行数据库连接，给$_db赋值
+    private function __construct(...) {
+        $this->_db = mysql_connect(...);
+    }
+
+    private function __clone() {};  //覆盖__clone()方法，禁止克隆
+
+    public static function getInstance()  {
+        if(! (self::$_instance instanceof self) ) {
+            self::$_instance = new self();
+        }
+        return self::$_instance;
+    }
+
+    public function doSometing($sql) {
+          $res = mysql_query($sql,$this->_db);
+        return $res;
+    }
+}
+
+$db = DB::getInstance();
+
+$db->doSomething("SELECT * FROM user");
+?>
+通过单例模式保证了只有一次连接数据库的操作。
+
+深入理解
+实际项目中使用的例子：
+
+<?php
+class db {
+    public $conn;
+    public static $sql;
+    public static $instance=null;
+
+    private function __construct(){
+        require_once('db.config.php');
+        $this->conn = mysql_connect($db['host'],$db['user'],$db['password']);
+        if(!mysql_select_db($db['database'],$this->conn)){
+            echo "失败";
+        };
+        mysql_query('set names utf8',$this->conn);
+    }
+
+    private function __clone() {}
+
+    public static function getInstance(){
+        if(is_null(self::$instance)){
+            self::$instance = new self();
+        }
+        return self::$instance;
+    }
+
+    // 查询数据库
+    public function select($table,$condition=array(),$field = array()){
+        $where='';
+        if(!empty($condition)){
+            foreach($condition as $k=>$v){
+                $where .= $k."='".$v."' and ";
+            }
+            $where = 'where '.$where .'1=1';
+        }
+        $fieldstr = '';
+        if(!empty($field)){
+            foreach($field as $k=>$v){
+                $fieldstr .= $v.',';
+            }
+            $fieldstr = rtrim($fieldstr,',');
+        }else{
+            $fieldstr = '*';
+        }
+        self::$sql = "select {$fieldstr} from {$table} {$where}";
+        $result = mysql_query(self::$sql,$this->conn);
+        $resuleRow = array();
+        $i = 0;
+        while($row = mysql_fetch_assoc($result)){
+            foreach($row as $k=>$v){
+                $resuleRow[$i][$k] = $v;
+            }
+            $i++;
+        }
+        return $resuleRow;
+    }
+
+    // 添加一条记
+     public function insert($table,$data){
+        $values = '';
+        $datas = '';
+        foreach($data as $k=>$v){
+            $values .= $k.',';
+            $datas .= "'$v'".',';
+        }
+        $values = rtrim($values,',');
+        $datas = rtrim($datas,',');
+        self::$sql = "INSERT INTO  {$table} ({$values}) VALUES ({$datas})";
+        if(mysql_query(self::$sql)){
+            return mysql_insert_id();
+        }else{
+            return false;
+        };
+     }
+
+     // 修改一条记录
+    public function update($table,$data,$condition=array()){
+        $where='';
+        if(!empty($condition)){
+
+            foreach($condition as $k=>$v){
+                $where .= $k."='".$v."' and ";
+            }
+            $where = 'where '.$where .'1=1';
+        }
+        $updatastr = '';
+        if(!empty($data)){
+            foreach($data as $k=>$v){
+                $updatastr .= $k."='".$v."',";
+            }
+            $updatastr = 'set '.rtrim($updatastr,',');
+        }
+        self::$sql = "update {$table} {$updatastr} {$where}";
+        return mysql_query(self::$sql);
+    }
+
+    // 删除记录
+     public function delete($table,$condition){
+        $where='';
+        if(!empty($condition)){
+            foreach($condition as $k=>$v){
+                $where .= $k."='".$v."' and ";
+            }
+            $where='where '.$where .'1=1';
+        }
+        self::$sql = "delete from {$table} {$where}";
+        return mysql_query(self::$sql);
+     }
+
+    public static function getLastSql(){
+        echo self::$sql;
+    }
+}
+
+$db = db::getInstance();
+//$list = $db->select('user',array('name'=>'tom'),array('name','password'));
+//echo $db->insert('user',array('name'=>'唐家三叔','password'=>'123'));
+//echo $db->update('user',array("name"=>'xxx',"password"=>'123'),array('id'=>1));
+echo $db->delete('user',array('id'=>'2'));
+db::getLastSql();
+?>
+问题
+还有另外一种实现单例模式的方法，这种方法有什么不好的地方？
+
+class Mysql{
+    // 通过static来保证实例的唯一性
+    public static $_instance;
+}
+答：虽然通过 static 关键字可以将属性设置为静态从而保证了实例的唯一性，但是 public 关键字决定了这个实例的权限是公共的。这样的后果是别人可以对该实例进行修改甚至删除（unset），是不安全的。

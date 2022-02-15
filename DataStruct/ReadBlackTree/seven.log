@@ -1,0 +1,112 @@
+DataStructure\ReadBlackTree\RedBlackTreeNode::__set_state(array(
+   'color' => 'black',
+   'key' => 80,
+   'leftChild' => 
+  DataStructure\ReadBlackTree\RedBlackTreeNode::__set_state(array(
+     'color' => 'red',
+     'key' => 60,
+     'leftChild' => 
+    DataStructure\ReadBlackTree\RedBlackTreeNode::__set_state(array(
+       'color' => 'black',
+       'key' => 50,
+       'leftChild' => 
+      DataStructure\ReadBlackTree\RedBlackTreeNode::__set_state(array(
+         'color' => 'red',
+         'key' => 45,
+         'leftChild' => 
+        DataStructure\ReadBlackTree\RedBlackTreeNode::__set_state(array(
+           'color' => 'black',
+           'key' => NULL,
+           'leftChild' => NULL,
+           'rightChild' => NULL,
+           'parent' => NULL,
+        )),
+         'rightChild' => 
+        DataStructure\ReadBlackTree\RedBlackTreeNode::__set_state(array(
+           'color' => 'black',
+           'key' => NULL,
+           'leftChild' => NULL,
+           'rightChild' => NULL,
+           'parent' => NULL,
+        )),
+         'parent' => NULL,
+      )),
+       'rightChild' => 
+      DataStructure\ReadBlackTree\RedBlackTreeNode::__set_state(array(
+         'color' => 'black',
+         'key' => NULL,
+         'leftChild' => NULL,
+         'rightChild' => NULL,
+         'parent' => NULL,
+      )),
+       'parent' => NULL,
+    )),
+     'rightChild' => 
+    DataStructure\ReadBlackTree\RedBlackTreeNode::__set_state(array(
+       'color' => 'black',
+       'key' => NULL,
+       'leftChild' => NULL,
+       'rightChild' => NULL,
+       'parent' => NULL,
+    )),
+     'parent' => 
+    DataStructure\ReadBlackTree\RedBlackTreeNode::__set_state(array(
+       'color' => 'black',
+       'key' => 70,
+       'leftChild' => NULL,
+       'rightChild' => 
+      DataStructure\ReadBlackTree\RedBlackTreeNode::__set_state(array(
+         'color' => 'black',
+         'key' => NULL,
+         'leftChild' => NULL,
+         'rightChild' => NULL,
+         'parent' => NULL,
+      )),
+       'parent' => NULL,
+    )),
+  )),
+   'rightChild' => 
+  DataStructure\ReadBlackTree\RedBlackTreeNode::__set_state(array(
+     'color' => 'black',
+     'key' => 120,
+     'leftChild' => 
+    DataStructure\ReadBlackTree\RedBlackTreeNode::__set_state(array(
+       'color' => 'black',
+       'key' => NULL,
+       'leftChild' => NULL,
+       'rightChild' => NULL,
+       'parent' => NULL,
+    )),
+     'rightChild' => 
+    DataStructure\ReadBlackTree\RedBlackTreeNode::__set_state(array(
+       'color' => 'red',
+       'key' => 140,
+       'leftChild' => 
+      DataStructure\ReadBlackTree\RedBlackTreeNode::__set_state(array(
+         'color' => 'black',
+         'key' => NULL,
+         'leftChild' => NULL,
+         'rightChild' => NULL,
+         'parent' => NULL,
+      )),
+       'rightChild' => 
+      DataStructure\ReadBlackTree\RedBlackTreeNode::__set_state(array(
+         'color' => 'black',
+         'key' => NULL,
+         'leftChild' => NULL,
+         'rightChild' => NULL,
+         'parent' => NULL,
+      )),
+       'parent' => NULL,
+    )),
+     'parent' => NULL,
+  )),
+   'parent' => 
+  DataStructure\ReadBlackTree\RedBlackTreeNode::__set_state(array(
+     'color' => 'black',
+     'key' => NULL,
+     'leftChild' => NULL,
+     'rightChild' => NULL,
+     'parent' => NULL,
+  )),
+))
