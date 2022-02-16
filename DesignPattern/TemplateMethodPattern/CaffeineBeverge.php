@@ -1,8 +1,9 @@
 <?php
-
 // 封装算法:模板方法模式.
 
-// 咖啡和茶的抽象共同点:咖啡因饮料.
+/**
+ * 咖啡因饮料。（咖啡和茶的抽象共同点）
+ */
 abstract class CaffeineBeverage
 {
     // 用同一个prepareRecipe()方法来处理茶和咖啡,prepareRecipe()被申明为final.不让子类覆盖此方法.
@@ -18,11 +19,17 @@ abstract class CaffeineBeverage
     abstract function brew();
     abstract function addCondiments();
 
+    /**
+     * 烧开水。
+     */
     function boilWater()
     {
         echo "Boiling water!\n";
     }
 
+    /**
+     * 倒入杯中。
+     */
     function pourInCup()
     {
         echo "Pouring into cup!\n";

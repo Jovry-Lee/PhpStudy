@@ -1,6 +1,6 @@
 <?php
 
-class db
+class SingletonDb
 {
     public $connect;
     public static $lastSql;
@@ -9,19 +9,22 @@ class db
     private function __construct()
     {
         try {
-            $this->connect = new PDO('mysql:host=127.0.0.1;dbname=seven', 'root', '123456');
+            $this->connect = new PDO(
+                'mysql:host=127.0.0.1; dbname=seven',
+                'root',
+                '123456'
+            );
+
             $this->connect->prepare('set names utf8')->execute();
         } catch (PDOException $e) {
             throw $e;
         }
     }
 
-    private function __clone(){}
-
     public static function getInstance()
     {
         if (self::$instance == null) {
-            self::$instance = new self();
+            self::$instance = new static();
         }
         return self::$instance;
     }
@@ -110,20 +113,3 @@ class db
         return self::$lastSql;
     }
 }
-
-$db = db::getInstance();
-
-
-// 增.
-$result = $db->insert('category', array('name' => '黑土豆', 'parent_id' => 7));
-var_dump($result);
-// 改.
-$result = $db->modify('category', array('name' => '黄皮土豆'), array('name' => '黑土豆'));
-var_dump($result);
-// 删.
-$result= $db->delete('category', array('name' => '黑土豆'));
-var_dump($result);
-// 查.
-$result = $db->query('category', array('parent_id' => 0), array('name'));
-// 获取最后一次查询的sql.
-var_dump($db->getLastSql());

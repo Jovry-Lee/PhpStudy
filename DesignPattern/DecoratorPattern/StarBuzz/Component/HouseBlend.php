@@ -1,5 +1,7 @@
 <?php
 
+namespace DecoratorPattern\StarBuzz\Component;
+
 class HouseBlend extends Beverage
 {
     public function __construct()

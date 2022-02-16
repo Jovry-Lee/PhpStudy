@@ -1,5 +1,7 @@
 <?php
 
+namespace DecoratorPattern\StarBuzz\Component;
+
 class DarkRoast extends Beverage
 {
     public function __construct()

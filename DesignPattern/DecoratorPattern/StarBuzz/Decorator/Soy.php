@@ -1,9 +1,15 @@
 <?php
+/**
+ * 用豆制品调味。
+ */
+namespace DecoratorPattern\StarBuzz\Decorator;
+
+use DecoratorPattern\StarBuzz\Component\Beverage;
 
 class Soy extends CondimentDecorator
 {
-    // 让Mocha能够引用一个Beverage，用示例变量记录饮料，也就是被装饰者。
     private $beverage;
+
     // 由构造器将实例记录在实例变量中。
     public function __construct(Beverage $beverage)
     {

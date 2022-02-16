@@ -1,4 +1,8 @@
 <?php
+/**
+ * 饮料抽象类。
+ */
+namespace DecoratorPattern\StarBuzz\Component;
 
 abstract class Beverage
 {
@@ -8,5 +12,6 @@ abstract class Beverage
     {
         return $this->description;
     }
+
     public abstract function cost();
 }

@@ -1,7 +1,13 @@
 <?php
 
-require_once __DIR__ . "/../../../Autoloader.php";
-\Bootstrap\Autoloader::instance()->addRoot(__DIR__ . '/')->init();
+use DecoratorPattern\StarBuzz\Component\DarkRoast;
+use DecoratorPattern\StarBuzz\Component\Espresso;
+use DecoratorPattern\StarBuzz\Component\HouseBlend;
+use DecoratorPattern\StarBuzz\Decorator\Mocha;
+use DecoratorPattern\StarBuzz\Decorator\Soy;
+use DecoratorPattern\StarBuzz\Decorator\Whip;
+
+require_once __DIR__ . DIRECTORY_SEPARATOR . "../../init.php";
 
 $beverage = new Espresso();
 echo $beverage->getDescription() . " $" . $beverage->cost() . "\n";

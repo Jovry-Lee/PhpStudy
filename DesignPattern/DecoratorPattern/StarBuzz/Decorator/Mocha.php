@@ -1,6 +1,12 @@
 <?php
+/**
+ * 用咖啡调味。
+ */
+namespace DecoratorPattern\StarBuzz\Decorator;
 
-class Whip extends CondimentDecorator
+use DecoratorPattern\StarBuzz\Component\Beverage;
+
+class Mocha extends CondimentDecorator
 {
     // 让Mocha能够引用一个Beverage，用示例变量记录饮料，也就是被装饰者。
     private $beverage;
@@ -12,11 +18,11 @@ class Whip extends CondimentDecorator
 
     public function getDescription()
     {
-        return $this->beverage->getDescription() . ',Whip';
+        return $this->beverage->getDescription() . ',Mocha';
     }
 
     public function cost()
     {
-        return 0.30 + $this->beverage->cost();
+        return 0.20 + $this->beverage->cost();
     }
 }

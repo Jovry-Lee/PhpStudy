@@ -1,5 +1,7 @@
 <?php
 
+namespace DecoratorPattern\StarBuzz\Component;
+
 class Decat extends Beverage
 {
     public function __construct()
