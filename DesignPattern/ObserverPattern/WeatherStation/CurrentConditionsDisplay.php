@@ -3,7 +3,7 @@
  * 布告板。
  */
 
-namespace WeatherStation;
+namespace ObserverPattern\WeatherStation;
 
 class CurrentConditionsDisplay implements Observer, DisplayElement
 {

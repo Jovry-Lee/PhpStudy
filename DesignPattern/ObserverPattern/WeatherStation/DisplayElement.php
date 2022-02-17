@@ -1,6 +1,6 @@
 <?php
 
-namespace WeatherStation;
+namespace ObserverPattern\WeatherStation;
 
 /**
  * 显示接口。

@@ -3,7 +3,7 @@
  *  气象数据类。
  */
 
-namespace WeatherStation;
+namespace ObserverPattern\WeatherStation;
 
 
 class WeatherData implements Subject
