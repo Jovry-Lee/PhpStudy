@@ -1,6 +1,6 @@
 <?php
 
-namespace DataStructure\Tree;
+namespace DataStructure\Tree\BinaryTree;
 
 /**
  * 树结点。

@@ -1,13 +1,12 @@
 <?php
 
-namespace DataStructure\ReadBlackTree;
+namespace DataStructure\Tree\RedBlackTree;
 
-require_once __DIR__ . '/../RedBlackTree.php';
-require_once __DIR__ . '/../RedBlackTreeNode.php';
+require_once __DIR__ . "/../../../../init.php";
 
 /********************************************************* Delete Test Begin *********************************************************/
-/** Case4: Deleted node's left child and right child is not nil, and it's successor is black, successor's brother is black, successor's brother's left child is red, it's right child is black.
-    This situation include case 3, case4.
+/** Case3: Deleted node's left child and right child is not nil, and it's successor is black, successor's brother is red.
+    This situation include case 1, case2.
  */
 #                       |80|                                                                          |90|
 #                      /    \                                                                         /   \
@@ -17,19 +16,19 @@ require_once __DIR__ . '/../RedBlackTreeNode.php';
 #                  /            \                                                                 /           \
 #                 /              \                                                               /             \
 #                /                \                                                             /               \
-#               /                  \                         (Delete 80)                       /                 \
-#            |40|                  |110|                    ------------->                  |40|                  |130|
+#               /                  \                            (Delete 80)                    /                 \
+#            |40|                  |110|                       ------------->               |40|                  |150|
 #             /\                   /   \                                                     /\                    / \
 #            /  \                 /     \                                                   /  \                  /   \
 #           /    \               /       \                                                 /    \                /     \
 #          /      \             /         \                                               /      \              /       \
 #         /        \           /           \                                             /        \            /         \
-#       |20|      |60|     |90|            |150|                                        |20|      |60|       |110|      |150|
+#       |20|      |60|     |90|             150                                        |20|      |60|       |110|      |170|
 #       /   \    /   \        \             /  \                                        / \       / \        /  \       /  \
 #      /     \  /     \        \           /    \                                      /   \     /   \      /    \     /    \
-#    |10| |30| |50| |70|      |100|      130    |170|                                |10| |30| |50| |70| |100|  |120| |140| |170|
-#                                       /   \
-#                                    |120| |140|
+#    |10| |30| |50| |70|      |100|    |130|    |170|                                |10| |30| |50| |70| |100|  130  |160| |180|
+#                                      /   \    /   \                                                           /  \
+#                                  |120| |140| |160| |180|                                                   |120| |140|
 
 $rbTree1 = new RedBlackTree();
 $nil = $rbTree1->nil;
@@ -45,11 +44,13 @@ $node70 = new RedBlackTreeNode(70, RedBlackTreeNode::COLOR_BLACK, $nil, $nil, $n
 $node110 = new RedBlackTreeNode(110, RedBlackTreeNode::COLOR_BLACK, $nil, $nil, $node80);
 $node90 = new RedBlackTreeNode(90, RedBlackTreeNode::COLOR_BLACK, $nil, $nil, $node110);
 $node100 = new RedBlackTreeNode(100, RedBlackTreeNode::COLOR_BLACK, $nil, $nil, $node90);
-$node150 = new RedBlackTreeNode(150, RedBlackTreeNode::COLOR_BLACK, $nil, $nil, $node110);
-$node130 = new RedBlackTreeNode(130, RedBlackTreeNode::COLOR_RED, $nil, $nil, $node150);
+$node150 = new RedBlackTreeNode(150, RedBlackTreeNode::COLOR_RED, $nil, $nil, $node110);
+$node130 = new RedBlackTreeNode(130, RedBlackTreeNode::COLOR_BLACK, $nil, $nil, $node150);
 $node120 = new RedBlackTreeNode(120, RedBlackTreeNode::COLOR_BLACK, $nil, $nil, $node130);
 $node140 = new RedBlackTreeNode(140, RedBlackTreeNode::COLOR_BLACK, $nil, $nil, $node130);
 $node170 = new RedBlackTreeNode(170, RedBlackTreeNode::COLOR_BLACK, $nil, $nil, $node150);
+$node160 = new RedBlackTreeNode(160, RedBlackTreeNode::COLOR_BLACK, $nil, $nil, $node170);
+$node180 = new RedBlackTreeNode(180, RedBlackTreeNode::COLOR_BLACK, $nil, $nil, $node170);
 
 $node80->leftChild = $node40;
 $node40->leftChild = $node20;
@@ -67,6 +68,8 @@ $node150->leftChild = $node130;
 $node130->leftChild = $node120;
 $node130->rightChild = $node140;
 $node150->rightChild = $node170;
+$node170->leftChild = $node160;
+$node170->rightChild = $node180;
 
 
 
@@ -90,12 +93,10 @@ $rbTree1->dfsPreOrder($rbTree1->root);
 echo "\n";
 die;
 /********************************************************* Delete Test End *********************************************************/
-
-
 // Execute Result:
 
-// Original RB-Tree DFS: 80(black)-40(black)-20(black)-10(black)-(black)-(black)-30(black)-(black)-(black)-60(black)-50(black)-(black)-(black)-70(black)-(black)-(black)-110(black)-90(black)-(black)-100(black)-(black)-(black)-150(black)-130(red)-120(black)-(black)-(black)-140(black)-(black)-(black)-170(black)-(black)-(black)-
+// Original RB-Tree DFS: 80(black)-40(black)-20(black)-10(black)-(black)-(black)-30(black)-(black)-(black)-60(black)-50(black)-(black)-(black)-70(black)-(black)-(black)-110(black)-90(black)-(black)-100(black)-(black)-(black)-150(red)-130(black)-120(black)-(black)-(black)-140(black)-(black)-(black)-170(black)-160(black)-(black)-(black)-180(black)-(black)-(black)-
 
 // Delete node info: key = 80, color is black
 
-// After Delete 80 RB-Tree DFS: 90(black)-40(black)-20(black)-10(black)-(black)-(black)-30(black)-(black)-(black)-60(black)-50(black)-(black)-(black)-70(black)-(black)-(black)-130(black)-110(black)-100(black)-(black)-(black)-120(black)-(black)-(black)-150(black)-140(black)-(black)-(black)-170(black)-(black)-(black)-
+// After Delete 80 RB-Tree DFS: 90(black)-40(black)-20(black)-10(black)-(black)-(black)-30(black)-(black)-(black)-60(black)-50(black)-(black)-(black)-70(black)-(black)-(black)-150(black)-110(black)-100(black)-(black)-(black)-130(red)-120(black)-(black)-(black)-140(black)-(black)-(black)-170(black)-160(black)-(black)-(black)-180(black)-(black)-(black)-

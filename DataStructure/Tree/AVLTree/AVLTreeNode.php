@@ -1,6 +1,8 @@
 <?php
-
-namespace DataStructure;
+/**
+ * 平衡二叉树结点。
+ */
+namespace DataStructure\Tree\AVLTree;
 
 /**
  * AVL树结点。

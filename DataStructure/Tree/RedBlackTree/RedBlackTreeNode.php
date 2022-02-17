@@ -2,9 +2,7 @@
 /**
  * red black tree node.
  */
-
-namespace DataStructure\ReadBlackTree;
-
+namespace DataStructure\Tree\RedBlackTree;
 
 class RedBlackTreeNode
 {

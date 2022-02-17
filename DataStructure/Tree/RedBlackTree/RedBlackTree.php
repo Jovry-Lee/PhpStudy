@@ -2,10 +2,7 @@
 /**
  * red black tree operation.
  */
-
-namespace DataStructure\ReadBlackTree;
-
-require_once __DIR__ . '/RedBlackTreeNode.php';
+namespace DataStructure\Tree\RedBlackTree;
 
 class RedBlackTree
 {
@@ -182,7 +179,7 @@ class RedBlackTree
 
     public function dfsPreOrder(RedBlackTreeNode $root)
     {
-//        var_dump($root->key . "\t" . $root->color);
+        // var_dump($root->key . "\t" . $root->color);
         echo "$root->key($root->color)-";
         if (!empty($root->leftChild)) {
             $this->dfsPreOrder($root->leftChild);
@@ -357,17 +354,5 @@ class RedBlackTree
         return $this->search($root->rightChild, $key);
     }
 }
-
-
-/********************************************************* Delete Test Begin *********************************************************/
-/*
-    
-
-*/
-
-
-
-
-/********************************************************* Delete Test End ***********************************************************/
 
 

@@ -1,12 +1,21 @@
 <?php
 
-namespace DataStructure\Tree\Heap;
+namespace DataStructure\Heap;
 
 
 class Heap
 {
     public $heap = array();
     public $n = 0; // 元素个数.
+
+    public function __construct(array $data)
+    {
+        $this->heap = $data;
+        $this->n = count($data);
+
+        // 通过已有数组进行建堆。
+        $this->createHeap();
+    }
 
     /**
      * 对heap数组在[low, high]范围内进行向下调整.
@@ -113,8 +122,6 @@ class Heap
      */
     public function heapSort()
     {
-        // 建堆.
-        $this->createHeap();
         for ($i = $this->n; $i > 1; $i--) {
             // 交换heap[i]与堆顶.
             $temp = $this->heap[$i];
@@ -127,32 +134,4 @@ class Heap
     }
 
 }
-
-$heap = new Heap();
-
-//  测试通过已有的数组建堆.
-// 注: 下标应从1开始.
-$insertArr = array(1=>85, 2=>55, 3=>82, 4=>57, 5=>68, 6=>92, 7=>99, 8=>98);
-
-$heap->heap = $insertArr;
-$heap->n = count($insertArr);
-
-//$heap->createHeap();
-//var_dump("堆元素: " . json_encode($heap->heap) . "\n");
-//
-//// 测试删除堆顶元素.
-//$heap->deleteTop();
-//var_dump("删除堆顶元素后的堆数据: " . json_encode($heap->heap) . "\n");
-
-
-// 测试堆递增排序.
-$heap->heapSort();
-var_dump("递增排序后的数组: " . json_encode($heap->heap) . "\n");
-
-
-// 测试往堆中插入数据.
-//foreach ($insertArr as $x) {
-//    $heap->insert($x);
-//}
-//var_dump(json_encode($heap->heap));
 

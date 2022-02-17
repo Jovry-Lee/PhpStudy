@@ -1,9 +1,8 @@
 <?php
 
-namespace DataStructure\ReadBlackTree;
+namespace DataStructure\Tree\RedBlackTree;
 
-require_once __DIR__ . '/../RedBlackTree.php';
-require_once __DIR__ . '/../RedBlackTreeNode.php';
+require_once __DIR__ . "/../../../../init.php";
 
 /********************************************************* Insert Test Begin *********************************************************/
 /** Case1: Insert node's parent is the left child of it's grandparent. */

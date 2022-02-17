@@ -1,9 +1,8 @@
 <?php
 
-namespace DataStructure\ReadBlackTree;
+namespace DataStructure\Tree\RedBlackTree;
 
-require_once __DIR__ . '/../RedBlackTree.php';
-require_once __DIR__ . '/../RedBlackTreeNode.php';
+require_once __DIR__ . "/../../../../init.php";
 
 /********************************************************* Delete Test Begin *********************************************************/
 /** Case3: Deleted node's left child and right child is not nil, and it's successor is black, successor's brother is red.
@@ -94,8 +93,6 @@ $rbTree1->dfsPreOrder($rbTree1->root);
 echo "\n";
 die;
 /********************************************************* Delete Test End *********************************************************/
-
-
 // Execute Result:
 
 // Original RB-Tree DFS: 80(black)-40(black)-20(black)-10(black)-(black)-(black)-30(black)-(black)-(black)-60(black)-50(black)-(black)-(black)-70(black)-(black)-(black)-110(black)-90(black)-(black)-100(black)-(black)-(black)-150(red)-130(black)-120(black)-(black)-(black)-140(black)-(black)-(black)-170(black)-160(black)-(black)-(black)-180(black)-(black)-(black)-

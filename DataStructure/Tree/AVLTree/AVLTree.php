@@ -1,6 +1,6 @@
 <?php
 
-include_once 'AVLTreeNode.php';
+namespace DataStructure\Tree\AVLTree;
 
 /**
  * 平衡二叉树.
@@ -10,7 +10,7 @@ class AVLTree
     /**
      * GetHeight: 获取以root为根结点的子树的当前height.
      *
-     * @param \DataStructure\AVLTreeNode $root 根结点.
+     * @param AVLTreeNode $root 根结点.
      *
      * @return integer
      */
@@ -25,7 +25,7 @@ class AVLTree
     /**
      * GetBalanceFactor: 计算结点root的平衡因子.
      *
-     * @param \DataStructure\AVLTreeNode $root 根结点.
+     * @param AVLTreeNode $root 根结点.
      *
      * @return integer
      */
@@ -38,7 +38,7 @@ class AVLTree
     /**
      * UpdateHeight: 更新结点root的height.
      *
-     * @param \DataStructure\AVLTreeNode $root 根结点.
+     * @param AVLTreeNode $root 根结点.
      *
      * @return void
      */
@@ -70,7 +70,7 @@ class AVLTree
     /**
      * RightRought: 对root结点进行右旋操作.
      *
-     * @param \DataStructure\AVLTreeNode &$root 根结点.
+     * @param AVLTreeNode &$root 根结点.
      *
      * @return void
      */
@@ -93,7 +93,7 @@ class AVLTree
     /**
      * LeftRought: 对root结点进行左旋操作.
      *
-     * @param \DataStructure\AVLTreeNode &$root 根结点.
+     * @param AVLTreeNode &$root 根结点.
      *
      * @return void
      */
@@ -116,7 +116,7 @@ class AVLTree
     /**
      * InsertNode: 插入权值为value的结点.
      *
-     * @param \DataStructure\AVLTreeNode &$root 根结点.
+     * @param AVLTreeNode &$root 根结点.
      * @param mixed                      $value 权值.
      *
      * @return void
@@ -125,7 +125,7 @@ class AVLTree
     {
         // 到达空结点.
         if (empty($root)) {
-            $root = new \DataStructure\AVLTreeNode($value);
+            $root = new AVLTreeNode($value);
             return;
         }
 
@@ -175,11 +175,3 @@ class AVLTree
         }
     }
 }
-
-$avl = new AVLTree();
-$node = null;
-for ($i =1; $i<4; $i++) {
-    $avl->insertNode($node, $i);
-}
-
-$avl->dfsPreOrder($node);

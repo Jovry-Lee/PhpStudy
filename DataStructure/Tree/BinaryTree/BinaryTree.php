@@ -1,8 +1,8 @@
 <?php
-
-namespace DataStructure\Tree;
-
-require_once 'Node.php';
+/**
+ * 二叉树。
+ */
+namespace DataStructure\Tree\BinaryTree;
 
 class BinaryTree
 {
@@ -124,19 +124,3 @@ class BinaryTree
         var_dump($root->value);
     }
 }
-
-
-//$bt = new BinaryTree();
-//$rootNode = null;
-//
-//$bt->insertRight($rootNode, 'a');
-//$bt->insertLeft($rootNode, 'b');
-//$bt->insertRight($rootNode, 'c');
-//
-//$bt->insertLeft($rootNode->leftChild, 'd');
-//$bt->insertLeft($rootNode->rightChild, 'e');
-//$bt->insertRight($rootNode->rightChild, 'f');
-//
-//$bt->dfsPreOrder($rootNode);
-//$bt->dfsInOrder($rootNode);
-//$bt->dfsPostOrder($rootNode);

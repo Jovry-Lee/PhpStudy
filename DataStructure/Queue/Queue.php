@@ -1,18 +1,14 @@
 <?php
-/**
- * Implementation of Queue using PHP
- * @author Al- Imran Ahmed
- */
-class Element{
-    public $value;
-    public $next;
-}
+
+namespace DataStructure\Queue;
+
 /**
  * Queue class that store element in queue
  * Remove element from font
  * Insert element to back
  */
-class Queue{
+class Queue
+{
     private $font = null;
     private $back = null;
 
@@ -55,15 +51,3 @@ class Queue{
         return $removedValue;
     }
 }
-/*
-//Client Code
-$queue = new Queue();
-$queue->enqueue("start");
-$queue->enqueue(1);
-$queue->enqueue(2);
-$queue->enqueue(3);
-$queue->enqueue(4);
-$queue->enqueue("End");
-while(!$queue->isEmpty()){
-  echo $queue->dequeue()."\n";
-}*/
