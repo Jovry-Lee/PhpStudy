@@ -1,0 +1,19 @@
+{
+    "name": "seven/php-study",
+    "description": "This is study project of php~",
+    "authors": [
+        {
+            "name": "Seven Lee",
+            "email": "xxx@qq.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "7.5.*"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests",
+            "Arithmetic\\": "Arithmetic"
+        }
+    }
+}

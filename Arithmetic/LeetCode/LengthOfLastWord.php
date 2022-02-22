@@ -4,7 +4,7 @@
  * 58. 最后一个单词长度。
  * @link https://leetcode-cn.com/problems/length-of-last-word/
  */
-namespace Arithmetic\LeeCode;
+namespace Arithmetic\LeetCode;
 
 
 class LengthOfLastWord
