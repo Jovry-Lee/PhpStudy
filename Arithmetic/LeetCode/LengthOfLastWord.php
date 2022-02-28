@@ -6,7 +6,6 @@
  */
 namespace Arithmetic\LeetCode;
 
-
 class LengthOfLastWord
 {
     public function solution1($str)
@@ -33,12 +32,4 @@ class LengthOfLastWord
         return $lastWorldLen;
     }
 }
-
-
-//$input = trim(fgets(STDIN));
-$input = 'Hello World';
-$input = "   fly me   to   the moon  ";
-$lengthOfLastWord = new LengthOfLastWord();
-$solution1Result = $lengthOfLastWord->solution3($input);
-echo "solution1 Result:\t" . $solution1Result . "\n";
 
