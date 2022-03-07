@@ -15,6 +15,11 @@ class Gcd
 {
     /**
      * 欧几里得算法。
+     *
+     * @param int $a 整数a。
+     * @param int $b 整数b。
+     *
+     * @return int
      */
     public function euclideanAlgorithm(int $a, int $b) :int
     {
