@@ -23,14 +23,17 @@ class LengthOfLastWord
 
     public function solution3($str)
     {
-        $str = trim($str);
-        $index = strlen($str) - 1;
-        $lastWorldLen = 0;
-        while($index != 0 && $str[$index] != ' ') {
-            $lastWorldLen++;
-            $index--;
+        $i = strlen($str) - 1;
+        while ($i >= 0 && $str[$i] == ' ') {
+            $i--;
         }
-        return $lastWorldLen;
+
+        $j = $i;
+        while ($j >= 0 && $str[$j] != ' ')
+        {
+            $j--;
+        }
+        return $i - $j;
     }
 }
 
