@@ -2,6 +2,8 @@
 
 namespace IocPattern\LaravelContainer\Test;
 
+use IocPattern\LaravelContainer\Test\Traffic\Visit;
+
 class Traveller
 {
     protected $trafficTool;

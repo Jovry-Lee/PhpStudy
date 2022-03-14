@@ -4,8 +4,7 @@
  * 58. 最后一个单词长度。
  * @link https://leetcode-cn.com/problems/length-of-last-word/
  */
-namespace Arithmetic\LeeCode;
-
+namespace Arithmetic\LeetCode;
 
 class LengthOfLastWord
 {
@@ -36,12 +35,4 @@ class LengthOfLastWord
         return $i - $j;
     }
 }
-
-
-//$input = trim(fgets(STDIN));
-$input = 'Hello World';
-$input = "   fly me   to   the moon  ";
-$lengthOfLastWord = new LengthOfLastWord();
-$solution1Result = $lengthOfLastWord->solution3($input);
-echo "solution1 Result:\t" . $solution1Result . "\n";
 
